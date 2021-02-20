@@ -10,7 +10,7 @@ route.get('/', async (req, res) => {
   if (config) {
     return res.status(200).json({ config });
   }
-  return res.status(500).json({ message: `Could not find config for token ${token}` });
+  return res.status(500).json({ message: `Could not find config for token '${token}'` });
 });
 
 route.post('/', async (req, res) => {
